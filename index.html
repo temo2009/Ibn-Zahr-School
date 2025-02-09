@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة ابن زهر الأساسية للبنين</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding-top: 56px;
+        }
+        .navbar {
+            background-color: #003366;
+            border-bottom: 2px solid #ffffff;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ffd700;
+        }
+        .hero-section {
+            background: linear-gradient(to right, #003366, #00509E);
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            border-bottom: 2px solid #ffffff;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .about-school {
+            background-color: #ffffff;
+            padding: 4rem 0;
+        }
+        .about-school h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #003366;
+        }
+        .features {
+            background-color: #f4f6f9;
+            padding: 4rem 0;
+        }
+        .features h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #003366;
+        }
+        .feature-box {
+            padding: 2rem;
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .feature-box i {
+            color: #003366;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .feature-box h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .contact-section {
+            background-color: #003366;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 2px solid #ffffff;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+        .btn-facebook {
+            background-color: #1877f2;
+            color: white;
+        }
+        .btn-twitter {
+            background-color: #1da1f2;
+            color: white;
+        }
+        .btn-instagram {
+            background-color: #e4405f;
+            color: white;
+        }
+        .btn-email {
+            background-color: #d44638;
+            color: white;
+        }
+        .btn-phone {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .btn-activities, .btn-coach {
+            background-color: #003366;
+            color: white;
+        }
+        .btn-activities:hover, .btn-coach:hover {
+            background-color: #00509E;
+            color: white;
+        }
+        .btn-close {
+            color: #fff;
+            background-color: #333;
+            border: none;
+            font-size: 1.5rem;
+        }
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #003366;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+        }
+        #backToTopBtn:hover {
+            background-color: #00509E;
+        }
+        .news-ticker {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .news-ticker marquee {
+            font-size: 1.2rem;
+        }
+        .upcoming-events, .testimonials, .gallery, .faq, .map {
+            padding: 4rem 0;
+        }
+        .card {
+            border: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">مدرسة ابن زهر</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">عن المدرسة</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">الأقسام</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">مدرسة ابن زهر الأساسية للبنين</h1>
+            <p class="lead animate__animated animate__fadeInUp">نحن نسعى لتوفير بيئة تعليمية متميزة للطلاب.</p>
+        </div>
+    </header>
+
+    <!-- News Ticker -->
+    <div class="news-ticker">
+        <marquee behavior="scroll" direction="right" scrollamount="5">
+            📢 آخر الأخبار: الامتحانات على التوالي .
+        </marquee>
+    </div>
+
+
+    <!-- About the School Section -->
+    <section class="about-school py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">عن مدرسة ابن زهر</h2>
+            <p class="text-center">
+                تأسست مدرسة ابن زهر الأساسية للبنين في عام 1990، وهي تعتبر من المدارس المتميزة في المنطقة في تقديم تعليم
+                متميز وبيئة تعليمية مبتكرة. يتكون المنهج الدراسي من مواد أكاديمية شاملة، بالإضافة إلى الأنشطة اللامنهجية
+                التي تهدف إلى تطوير مهارات الطلاب المختلفة.
+            </p>
+            <p class="text-center">
+                المدرسة تقدم تعليمًا لجميع المراحل الدراسية الأساسية، ولديها كادر تعليمي متميز يتمتع بخبرة كبيرة في المجال
+                التربوي.
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">مميزات المدرسة</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>تعليم متميز</h3>
+                        <p><button class="btn btn-coach" data-bs-toggle="modal" data-bs-target="#learningModal">عرض أنواع التعلم</button></p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="fas fa-users"></i>
+                        <h3>كادر متخصص</h3>
+                        <p><button class="btn btn-coach" data-bs-toggle="modal" data-bs-target="#coachModal">عرض الكوادر</button></p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="feature-box">
+                        <i class="fas fa-book-reader"></i>
+                        <h3>أنشطة متنوعة</h3>
+                        <p><button class="btn btn-activities" data-bs-toggle="modal" data-bs-target="#activitiesModal">عرض الأنشطة</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Modal -->
+    <div class="modal fade" id="learningModal" tabindex="-1" aria-labelledby="learningModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="learningModalLabel">أنواع التعليم المتميز</h5>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>التعلم التفاعلي: استخدام الأنشطة العملية لتعليم الطلاب.</li>
+                        <li>التعلم عن بعد: توفير دروس ودورات عبر الإنترنت.</li>
+                        <li>التعلم باستخدام التكنولوجيا: تطبيقات وأدوات تعليمية مبتكرة.</li>
+                        <li>التعلم المدمج: مزيج من التعلم التقليدي والحديث.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activities Modal -->
+    <div class="modal fade" id="activitiesModal" tabindex="-1" aria-labelledby="activitiesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="activitiesModalLabel">أنشطة متنوعة</h5>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>الأنشطة الرياضية: كرة القدم، كرة السلة، وغيرها من الألعاب.</li>
+                        <li>الأنشطة الفنية: الرسم، الموسيقى، والتمثيل.</li>
+                        <li>الأنشطة العلمية: ورش عمل علمية ومشاريع بحثية.</li>
+                        <li>الأنشطة الثقافية: محاضرات، مسابقات شعرية، ومسابقات ثقافية.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coach Modal -->
+    <div class="modal fade" id="coachModal" tabindex="-1" aria-labelledby="coachModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="coachModalLabel">أنواع الكوادر</h5>
+                </div>
+                <div class="modal-body">
+                    <ul>
+                        <li>مديرين أكاديميين: أصحاب الخبرة في قيادة الأنظمة التعليمية.</li>
+                        <li>معلمون متخصصون: معلمون في جميع التخصصات الأكاديمية.</li>
+                        <li>مدربون رياضيون: مختصون في الرياضات المختلفة.</li>
+                        <li>فنيون تقنيون: مختصون في تقنيات التعليم الحديثة.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Events -->
+    <section class="upcoming-events">
+        <div class="container">
+            <h2 class="text-center mb-4">الفعاليات القادمة</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">الامتحانات </h5>
+                            <p class="card-text">تاريخ: 15 فبراير 2025</p>
+                            <a href="#" class="btn btn-primary">المزيد من التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">احتفاف الاوائل علفصل</h5>
+                            <p class="card-text">تاريخ: 20 فبراير 2025</p>
+                            <a href="#" class="btn btn-primary">المزيد من التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">موبارات الفصول</h5>
+                            <p class="card-text">تاريخ: 25 فبراير 2025</p>
+                            <a href="#" class="btn btn-primary">المزيد من التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-center mb-4">شهادات أولياء الأمور</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"مدرسة رائعة بكل ما تحمله الكلمة من معنى، أنصح بها كل من يبحث عن تعليم متميز."</p>
+                            <h5 class="card-title">- ولي أمر طالب عبدالهادي الفراخ </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"الكادر التعليمي ممتاز والأنشطة المقدمة متنوعة ومفيدة."</p>
+                            <h5 class="card-title">- ولي أمر طالب سامي يعقوب</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"بيئة تعليمية محفزة ومريحة للطلاب."</p>
+                            <h5 class="card-title">- ولي أمر طالب عمر القيسي</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="text-center mb-4">الأسئلة الشائعة</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            ما هي ساعات الدوام في المدرسة؟
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            ساعات العمل من الساعة 8:10 صباحًا حتى الساعة 1:45 ظهرًا.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            هل توجد أنشطة لامنهجية؟
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                        <div class="accordion-body">
+                            نعم، تقدم المدرسة مجموعة متنوعة من الأنشطة اللامنهجية مثل الرياضة والفنون والعلوم.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="mb-4">اتصل بنا</h2>
+            <p>تواصل معنا عبر وسائل التواصل الاجتماعي أو البريد الإلكتروني.</p>
+            <div>
+                <a href="https://www.facebook.com/share/1DJpsMVPEG" class="btn btn-facebook mx-2" target="_blank">
+                    <i class="fab fa-facebook"></i> فيسبوك
+                </a>
+                <a href="https://twitter.com/حساب_المدرسة" class="btn btn-twitter mx-2" target="_blank">
+                    <i class="fab fa-twitter"></i> تويتر
+                </a>
+                <a href="https://www.instagram.com/حساب_المدرسة" class="btn btn-instagram mx-2" target="_blank">
+                    <i class="fab fa-instagram"></i> إنستجرام
+                </a>
+                <a href="mailto:amroomashny@yahoo.com" class="btn btn-email mx-2 email-link">
+                    <i class="fas fa-envelope"></i> البريد الإلكتروني: amroomashny@yahoo.com
+                </a>
+                <p>رقم الهاتف: <strong>+96264382911</strong></p>
+                <p>موقع المدرسة: <a href="https://maps.app.goo.gl/F5u7UHxmPgG35Bmf9" target="_blank">اضغط هنا لعرض الموقع</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة - المطور: وسيم محفوظ</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="العودة إلى الأعلى"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // إظهار إحداثيات الضغط
+        document.body.addEventListener('click', function(event) {
+            console.log('تم الضغط في الإحداثيات: (' + event.clientX + ', ' + event.clientY + ')');
+        });
+
+        // زر العودة إلى الأعلى
+        const backToTopBtn = document.getElementById("backToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        backToTopBtn.addEventListener("click", function() {
+            document.body.scrollTop = 0; // للمتصفحات القديمة
+            document.documentElement.scrollTop = 0; // للمتصفحات الحديثة
+        });
+    </script>
+</body>
+</html>
