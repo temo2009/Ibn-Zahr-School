@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل دخول الإدمن</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .login-container h2 {
+            color: #003366;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .form-control {
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+        }
+        .form-control:focus {
+            border-color: #003366;
+            box-shadow: 0 0 5px rgba(0, 51, 102, 0.5);
+        }
+        .btn-login {
+            background-color: #003366;
+            color: white;
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 10px;
+            border: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+        .btn-login:hover {
+            background-color: #00509E;
+        }
+        .alert {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>تسجيل دخول الإدمن</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="اسم المستخدم" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="كلمة المرور" required>
+            </div>
+            <button type="submit" class="btn btn-login">تسجيل الدخول</button>
+        </form>
+        <div id="errorMessage" class="alert alert-danger mt-3" style="display: none;"></div>
+    </div>
+
+    <script>
+        // معالجة تسجيل الدخول
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // بيانات تسجيل الدخول الصحيحة (يمكن استبدالها ببيانات من قاعدة بيانات)
+            const correctUsername = 'admin';
+            const correctPassword = 'admin123';
+
+            if (username === correctUsername && password === correctPassword) {
+                // تسجيل الدخول ناجح
+                alert('تم تسجيل الدخول بنجاح!');
+                window.location.href = 'index.html'; // توجيه إلى الصفحة الرئيسية
+            } else {
+                // تسجيل الدخول فاشل
+                document.getElementById('errorMessage').innerText = 'اسم المستخدم أو كلمة المرور غير صحيحة.';
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
